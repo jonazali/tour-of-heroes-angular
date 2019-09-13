@@ -1,7 +1,6 @@
 <div *ngIf="hero">
-  <h2>{{ hero.name }} Details</h2>
-  <div><span>Id: </span>{{ hero.id }}</div>
-  <div><span>Name: </span> {{ hero.name }}</div>
-  <div><span>First appearance: </span> {{ hero.firstappeared }}</div>
+  <h2>Character Details</h2>
+  <div><span>Name: </span> <b>{{ hero.name }}</b></div>
+  <div><span>First appearance: </span> <b>{{ hero.firstappeared }}</b></div>
   <img class="hero-image" src="{{ hero.image }}" alt="hero image" />
 </div>
