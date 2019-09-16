@@ -6,7 +6,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { DataService } from './data.service';
+import { HeroService } from './hero.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { DataService } from './data.service';
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [
-    DataService
+    HeroService
   ],
   bootstrap: [AppComponent]
 })

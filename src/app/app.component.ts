@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from './hero.model';
-import { DataService } from './data.service';
+import { HeroService } from './hero.service';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +10,10 @@ import { DataService } from './data.service';
 export class AppComponent implements OnInit {
   heroes$: Hero[];
 
-  constructor(private dataService: DataService) {}
+  constructor(private heroService: HeroService) {}
 
   ngOnInit() {
-    return this.dataService.getUsers()
+    return this.heroService.getHeroes()
     .subscribe(data => this.heroes$ = data);
   }
 
