@@ -1,4 +1,6 @@
 export class Hero {
   id: number;
-  name: string;
+  slug: string;
+  firstAppearance: string;
+  image: string;
 }

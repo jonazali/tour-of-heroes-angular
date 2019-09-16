@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 import { Hero } from './hero.model';
-import { HEROES } from './mock-heroes';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeroService {
-  constructor() {}
+  apiUrl = 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json';
+  constructor(private _http: HttpClient) {}
 
   getHeroes(): Observable<Hero[]> {
-    // TODO: send the message _after_ fetching the heroes
-    return of(HEROES);
+    return this._http.get<Hero[]>(this.apiUrl);
   }
 }
